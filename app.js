@@ -11,7 +11,9 @@ app.use("/items", itemsRoutes);
 
 
 /** Favicon handler to eliminate nuisance logs */
-app.get('/favicon.ico', (req, res) => res.sendStatus(204))
+app.get('/favicon.ico', (req, res) => {
+  res.sendStatus(204)
+})
 
 /** 404 handler */
 
