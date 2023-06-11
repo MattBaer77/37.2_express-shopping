@@ -18,7 +18,8 @@ app.get('/favicon.ico', (req, res) => {
 /** 404 handler */
 
 app.use(function (req, res, next) {
-  return new ExpressError("Not Found", 404);
+  const e = new ExpressError("Not Found", 404);
+  next(e)
 });
 
 /** general error handler */
